@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mister Brochetas: el sabor original de la parrilla. Brochetas, refrescos hervidos y gaseosas en Plaza Bolívar.">
+  <title>Mister Brochetas | El sabor original de la parrilla</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">🔥</span><span>MISTER<br><b>BROCHETAS</b></span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#menu">Menú</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <a class="cart-link" href="#pedido">🛒 <span id="cart-count">0</span> · <span id="cart-total">Bs 0</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">SABOR HECHO A LAS BRASAS</p>
+        <h1>MISTER<br><span>BROCHETAS</span></h1>
+        <p class="slogan">El sabor original de la parrilla.</p>
+        <p class="hero-description">Brochetas a la parrilla, acompañamientos deliciosos y ese sabor que siempre invita a volver.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Ver el menú</a>
+          <a class="button button-outline" href="#ubicacion">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-badge"><span>🔥</span><b>DIRECTO<br> A LA PARRILLA</b></div>
+    </section>
+
+    <!-- Ticker actualizado (Sin Morcilla ni Ubre) -->
+    <div class="ticker" aria-label="Especialidades">
+      <div class="ticker-track">GIBAS ✦ CARNE DE RES ✦ COSTILLAS ✦ ALITAS ✦ PECHUGA ✦ CHORIZO ✦ GIBAS ✦ CARNE DE RES ✦ COSTILLAS ✦ ALITAS ✦ PECHUGA ✦ CHORIZO ✦</div>
+    </div>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">BUEN SABOR, BUEN PRECIO</p>
+        <h2>Nuestro <span>menú</span></h2>
+        <p>¡Elige tus favoritos! Todas nuestras brochetas de carne cuestan lo mismo.</p>
+      </div>
+      <div class="category-tabs" role="group" aria-label="Filtrar menú">
+        <button class="tab active" data-filter="todos">Todo</button>
+        <button class="tab" data-filter="carnes">Brochetas</button>
+        <button class="tab" data-filter="acompanamientos">Acompañamientos</button>
+        <button class="tab" data-filter="refrescos">Refrescos</button>
+        <button class="tab" data-filter="gaseosas">Gaseosas</button>
+        <button class="tab" data-filter="salsas">Salsas</button>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="menu-note">Las porciones de acompañamiento y las salsas se sirven para acompañar tus brochetas.</p>
+    </section>
+
+    <section class="sides-band">
+      <div>
+        <p class="eyebrow">EL COMPLEMENTO PERFECTO</p>
+        <h2>¡Acompaña tu brocheta!</h2>
+        <p>Yuca, arroz batido, papa salteada y tres salsas para darle tu toque favorito.</p>
+      </div>
+      <div class="side-chips">
+        <span>Yuca</span>
+        <span>Arroz batido</span>
+        <span>Papa salteada</span>
+        <span>Salsa verde</span>
+        <span>Salsa de maní</span>
+        <span>Llajua normal</span>
+      </div>
+    </section>
+
+    <section class="section order-section" id="pedido">
+      <div class="section-heading">
+        <p class="eyebrow">ARMA TU PEDIDO</p>
+        <h2>Tu <span>pedido</span></h2>
+        <p>Agrega productos desde el menú y envíalo directamente por WhatsApp.</p>
+      </div>
+      <div class="order-panel">
+        <div id="cart-items" class="cart-items">
+          <p class="empty-cart">Tu pedido está vacío. ¡Agrega algo rico del menú!</p>
+        </div>
+        <div class="order-total">
+          <span>Total estimado</span>
+          <strong id="order-total">Bs 0</strong>
+        </div>
+        
+        <label for="customer-name">Tu nombre</label>
+        <input id="customer-name" type="text" placeholder="Ej. Mishel" required>
+        
+        <!-- Botón para enviar directo a WhatsApp (Número 71479101) -->
+        <button class="button button-primary submit-order" id="send-whatsapp-btn" style="background-color: #25D366; color: white; margin-top: 15px; width: 100%; border: none;">
+          📲 Enviar pedido por WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section" id="horarios">
+      <div class="info-card">
+        <span class="info-icon">🕒</span>
+        <p class="eyebrow">TE ESPERAMOS</p>
+        <h2>Horarios de atención</h2>
+        <p>Todos los días</p>
+        <strong>9:30 a. m. a 10:00 p. m.</strong>
+      </div>
+      <div class="info-card location-card" id="ubicacion">
+        <span class="info-icon">📍</span>
+        <p class="eyebrow">ENCUÉNTRANOS</p>
+        <h2>¿Dónde estamos?</h2>
+        <p>Al lado de la Plaza Bolívar,<br>avenida 6 de Agosto, acera este.</p>
+        <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Plaza+Bolivar+avenida+6+de+Agosto+acera+este" target="_blank" rel="noopener">Buscar en Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">🔥</span><span>MISTER<br><b>BROCHETAS</b></span></a>
+    <p>El sabor original de la parrilla.</p>
+    <small>© <span id="year"></span> Mister Brochetas · Hecho con sabor a parrilla.</small>
+  </footer>
+</body>
+</html>
